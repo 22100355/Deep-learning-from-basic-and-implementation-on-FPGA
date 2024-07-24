@@ -1,0 +1,12 @@
+lenet5
+[Oo]bj
+*.o
+
+# vi/vim swap file
+*.swp
+
+# core dump
+*.stack.dump
+
+resized.png
+reverted.png

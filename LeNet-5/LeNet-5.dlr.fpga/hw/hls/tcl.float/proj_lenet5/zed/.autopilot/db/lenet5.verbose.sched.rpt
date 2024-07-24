@@ -1,0 +1,277 @@
+
+
+================================================================
+== Vitis HLS Report for 'lenet5'
+================================================================
+* Date:           Tue Jul  2 15:30:41 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        proj_lenet5
+* Solution:       zed (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.567 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   501432|   501432|  5.014 ms|  5.014 ms|  501433|  501433|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 19
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 20 [1/1] (1.00ns)   --->   "%image_r_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %image_r"   --->   Operation 20 'read' 'image_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 21 [1/1] (1.00ns)   --->   "%classes_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %classes"   --->   Operation 21 'read' 'classes_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p1_out_data = alloca i32 1"   --->   Operation 22 'alloca' 'p1_out_data' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%c1_out_data = alloca i32 1" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:56]   --->   Operation 23 'alloca' 'c1_out_data' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%c2_out_data = alloca i32 1" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:154]   --->   Operation 24 'alloca' 'c2_out_data' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p2_out_data = alloca i32 1"   --->   Operation 25 'alloca' 'p2_out_data' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%f1_out_data = alloca i32 1" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:234]   --->   Operation 26 'alloca' 'f1_out_data' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%f2_out_data = alloca i32 1" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:274]   --->   Operation 27 'alloca' 'f2_out_data' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln69 = call void @Convolution2d<float>, i32 %c1_out_data, i32 %data, i32 %image_r_read, i32 %conv1_bias, i32 %conv1_weight" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:69]   --->   Operation 28 'call' 'call_ln69' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %classes_read, i32 2, i32 31" [/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64]   --->   Operation 29 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 30 [1/2] (0.00ns)   --->   "%call_ln69 = call void @Convolution2d<float>, i32 %c1_out_data, i32 %data, i32 %image_r_read, i32 %conv1_bias, i32 %conv1_weight" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:69]   --->   Operation 30 'call' 'call_ln69' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 31 [2/2] (0.00ns)   --->   "%call_ln120 = call void @Pooling2dMax<float, 1, 0, 1036831949u>.1, i32 %p1_out_data, i32 %c1_out_data" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:120]   --->   Operation 31 'call' 'call_ln120' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 32 [1/2] (0.00ns)   --->   "%call_ln120 = call void @Pooling2dMax<float, 1, 0, 1036831949u>.1, i32 %p1_out_data, i32 %c1_out_data" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:120]   --->   Operation 32 'call' 'call_ln120' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln167 = call void @Convolution2d<float>.1, i32 %c2_out_data, i32 %p1_out_data, i32 %conv2_bias, i32 %conv2_weight" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:167]   --->   Operation 33 'call' 'call_ln167' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 34 [1/2] (0.00ns)   --->   "%call_ln167 = call void @Convolution2d<float>.1, i32 %c2_out_data, i32 %p1_out_data, i32 %conv2_bias, i32 %conv2_weight" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:167]   --->   Operation 34 'call' 'call_ln167' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln218 = call void @Pooling2dMax<float, 1, 0, 1036831949u>, i32 %p2_out_data, i32 %c2_out_data" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:218]   --->   Operation 35 'call' 'call_ln218' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln218 = call void @Pooling2dMax<float, 1, 0, 1036831949u>, i32 %p2_out_data, i32 %c2_out_data" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:218]   --->   Operation 36 'call' 'call_ln218' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln0 = call void @lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2, i32 %p2_out_data, i32 %f1_out_data, i32 %fc1_bias, i32 %fc1_weight"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 38 [1/2] (0.00ns)   --->   "%call_ln0 = call void @lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2, i32 %p2_out_data, i32 %f1_out_data, i32 %fc1_bias, i32 %fc1_weight"   --->   Operation 38 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 39 [2/2] (0.00ns)   --->   "%call_ln0 = call void @lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26, i32 %f1_out_data, i32 %f2_out_data, i32 %fc2_bias, i32 %fc2_weight"   --->   Operation 39 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 7.30>
+ST_12 : Operation 40 [1/2] (0.00ns)   --->   "%call_ln0 = call void @lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26, i32 %f1_out_data, i32 %f2_out_data, i32 %fc2_bias, i32 %fc2_weight"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 41 [1/1] (0.00ns)   --->   "%sext_ln64 = sext i30 %trunc_ln1" [/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64]   --->   Operation 41 'sext' 'sext_ln64' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 42 [1/1] (0.00ns)   --->   "%data_addr = getelementptr i32 %data, i32 %sext_ln64" [/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64]   --->   Operation 42 'getelementptr' 'data_addr' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 43 [1/1] (7.30ns)   --->   "%empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %data_addr, i32 10" [/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64]   --->   Operation 43 'writereq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 5> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 44 [2/2] (0.00ns)   --->   "%call_ln64 = call void @lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27, i32 %data, i30 %trunc_ln1, i32 %f2_out_data, i32 %fc3_bias, i32 %fc3_weight" [/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64]   --->   Operation 44 'call' 'call_ln64' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 45 [1/2] (0.00ns)   --->   "%call_ln64 = call void @lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27, i32 %data, i30 %trunc_ln1, i32 %f2_out_data, i32 %fc3_bias, i32 %fc3_weight" [/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64]   --->   Operation 45 'call' 'call_ln64' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 7.30>
+ST_15 : Operation 46 [5/5] (7.30ns)   --->   "%empty_20 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %data_addr" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344]   --->   Operation 46 'writeresp' 'empty_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 7.30>
+ST_16 : Operation 47 [4/5] (7.30ns)   --->   "%empty_20 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %data_addr" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344]   --->   Operation 47 'writeresp' 'empty_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 7.30>
+ST_17 : Operation 48 [3/5] (7.30ns)   --->   "%empty_20 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %data_addr" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344]   --->   Operation 48 'writeresp' 'empty_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 7.30>
+ST_18 : Operation 49 [2/5] (7.30ns)   --->   "%empty_20 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %data_addr" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344]   --->   Operation 49 'writeresp' 'empty_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 7.30>
+ST_19 : Operation 50 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8"   --->   Operation 50 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data, void @empty_7, i32 0, i32 0, void @empty_11, i32 0, i32 10, void @empty_10, void @empty, void @empty_11, i32 16, i32 16, i32 16, i32 16, void @empty_11, void @empty_11"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %data"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %classes, void @empty_0, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_5, void @empty_4, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_3"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %classes, void @empty_2, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_3"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %image_r, void @empty_0, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_5, void @empty_6, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_3"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %image_r, void @empty_2, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_3"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_0, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_5, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 58 [1/5] (7.30ns)   --->   "%empty_20 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %data_addr" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344]   --->   Operation 58 'writeresp' 'empty_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_19 : Operation 59 [1/1] (0.00ns)   --->   "%ret_ln344 = ret" [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344]   --->   Operation 59 'ret' 'ret_ln344' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read operation ('image') on port 'image_r' [22]  (1 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('data_addr', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64) [38]  (0 ns)
+	bus request operation ('empty', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64) on port 'data' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64) [39]  (7.3 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_20', /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) on port 'data' (/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) [41]  (7.3 ns)
+
+ <State 16>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_20', /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) on port 'data' (/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) [41]  (7.3 ns)
+
+ <State 17>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_20', /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) on port 'data' (/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) [41]  (7.3 ns)
+
+ <State 18>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_20', /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) on port 'data' (/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) [41]  (7.3 ns)
+
+ <State 19>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_20', /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) on port 'data' (/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:344) [41]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

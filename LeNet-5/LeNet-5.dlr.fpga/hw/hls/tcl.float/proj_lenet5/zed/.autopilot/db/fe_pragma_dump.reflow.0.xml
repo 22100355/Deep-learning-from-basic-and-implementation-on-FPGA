@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp" line="35" pragmaType="inline" parentfunction="lenet5" off="1" region="0" recursive="0"/>
+<pragma file="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp" line="42" pragmaType="interface" parentfunction="lenet5" mode="m_axi" port="classes" bundle="data" offset="slave" name="" depth="10" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp" line="44" pragmaType="interface" parentfunction="lenet5" mode="m_axi" port="image" bundle="data" offset="slave" name="" depth="1024" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp" line="48" pragmaType="interface" parentfunction="lenet5" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="1"/>
+</pragmas>

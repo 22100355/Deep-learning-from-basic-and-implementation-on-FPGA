@@ -1,0 +1,8 @@
+*.doc
+*.vsd
+*.ppt
+*.old
+*.sav
+*.org
+*.log
+*.swp

@@ -1,0 +1,528 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Jul  2 16:25:42 2024
+# Process ID: 12909
+# Current directory: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float
+# Command line: vivado -mode gui -source run_vivado.tcl
+# Log file: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/vivado.log
+# Journal file: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/vivado.jou
+# Running On: train18, OS: Linux, CPU Frequency: 3299.615 MHz, CPU Physical cores: 4, Host memory: 16610 MB
+#-----------------------------------------------------------
+start_gui
+source run_vivado.tcl
+# set VIVADO_VERSION $::env(VIVADO_VERSION)
+# set PROJECT_DIR  $::env(PROJECT_DIR)
+# set PROJECT_NAME $::env(PROJECT_NAME)
+# set DESIGN_NAME  $::env(DESIGN_NAME)
+# set PART         $::env(PART)
+# set FILE_XDC     $::env(FILE_XDC)
+# set DIR_BFM      $::env(DIR_BFM)
+# set DIR_IP       $::env(DIR_IP)
+# source ${DESIGN_NAME}.tcl
+## namespace eval _tcl {
+## proc get_script_folder {} {
+##    set script_path [file normalize [info script]]
+##    set script_folder [file dirname $script_path]
+##    return $script_folder
+## }
+## }
+## variable script_folder
+## set script_folder [_tcl::get_script_folder]
+## set scripts_vivado_version ${VIVADO_VERSION}
+## set current_vivado_version [version -short]
+## if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
+##    puts ""
+##    catch {common::send_gid_msg -ssname BD::TCL -id 2041 -severity "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+## 
+##    return 1
+## }
+## set list_projs [get_projects -quiet]
+## if { $list_projs eq "" } {
+##    create_project -force ${PROJECT_NAME} ${PROJECT_DIR} -part ${PART}
+## }
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at /tools/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/xilinx/Vivado/2021.2/data/ip'.
+create_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:10 . Memory (MB): peak = 7737.223 ; gain = 51.086 ; free physical = 7581 ; free virtual = 19980
+## set IP_DIR_LIST "${DIR_IP} ${DIR_BFM}"
+## set_property  ip_repo_paths  ${IP_DIR_LIST} [current_project]
+## update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/hls/tcl.float/proj_lenet5/zed/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/iplib/bfm_axi_if.z7'.
+## variable design_name
+## set design_name ${DESIGN_NAME}
+## set errMsg ""
+## set nRet 0
+## set cur_design [current_bd_design -quiet]
+## set list_cells [get_bd_cells -quiet]
+## if { ${design_name} eq "" } {
+##    # USE CASES:
+##    #    1) Design_name not set
+## 
+##    set errMsg "Please set the variable <design_name> to a non-empty value."
+##    set nRet 1
+## 
+## } elseif { ${cur_design} ne "" && ${list_cells} eq "" } {
+##    # USE CASES:
+##    #    2): Current design opened AND is empty AND names same.
+##    #    3): Current design opened AND is empty AND names diff; design_name NOT in project.
+##    #    4): Current design opened AND is empty AND names diff; design_name exists in project.
+## 
+##    if { $cur_design ne $design_name } {
+##       common::send_gid_msg -ssname BD::TCL -id 2001 -severity "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
+##       set design_name [get_property NAME $cur_design]
+##    }
+##    common::send_gid_msg -ssname BD::TCL -id 2002 -severity "INFO" "Constructing design in IPI design <$cur_design>..."
+## 
+## } elseif { ${cur_design} ne "" && $list_cells ne "" && $cur_design eq $design_name } {
+##    # USE CASES:
+##    #    5) Current design opened AND has components AND same names.
+## 
+##    set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+##    set nRet 1
+## } elseif { [get_files -quiet ${design_name}.bd] ne "" } {
+##    # USE CASES: 
+##    #    6) Current opened design, has components, but diff names, design_name exists in project.
+##    #    7) No opened design, design_name exists in project.
+## 
+##    set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+##    set nRet 2
+## 
+## } else {
+##    # USE CASES:
+##    #    8) No opened design, design_name not in project.
+##    #    9) Current opened design, has components, but diff names, design_name not in project.
+## 
+##    common::send_gid_msg -ssname BD::TCL -id 2003 -severity "INFO" "Currently there is no design <$design_name> in project, so creating one..."
+## 
+##    create_bd_design $design_name
+## 
+##    common::send_gid_msg -ssname BD::TCL -id 2004 -severity "INFO" "Making design <$design_name> as current_bd_design."
+##    current_bd_design $design_name
+## 
+## }
+INFO: [BD::TCL 103-2003] Currently there is no design <lenet5> in project, so creating one...
+Wrote  : </home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.srcs/sources_1/bd/lenet5/lenet5.bd> 
+INFO: [BD 41-2613] The output directory /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5 for lenet5 cannot be found.
+INFO: [BD::TCL 103-2004] Making design <lenet5> as current_bd_design.
+## common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
+INFO: [BD::TCL 103-2005] Currently the variable <design_name> is equal to "lenet5".
+## if { $nRet != 0 } {
+##    catch {common::send_gid_msg -ssname BD::TCL -id 2006 -severity "ERROR" $errMsg}
+##    return $nRet
+## }
+## set bCheckIPsPassed 1
+## set bCheckIPs 1
+## if { $bCheckIPs == 1 } {
+##    set list_check_ips "\ 
+## xilinx.com:ip:axi_bram_ctrl:4.1\
+## xilinx.com:ip:blk_mem_gen:8.4\
+## future-ds.com:user:bfm_axi_if:1.1\
+## xilinx.com:ip:clk_wiz:6.0\
+## xilinx.com:hls:lenet5:1.0\
+## xilinx.com:ip:proc_sys_reset:5.0\
+## "
+## 
+##    set list_ips_missing ""
+##    common::send_gid_msg -ssname BD::TCL -id 2011 -severity "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
+## 
+##    foreach ip_vlnv $list_check_ips {
+##       set ip_obj [get_ipdefs -all $ip_vlnv]
+##       if { $ip_obj eq "" } {
+##          lappend list_ips_missing $ip_vlnv
+##       }
+##    }
+## 
+##    if { $list_ips_missing ne "" } {
+##       catch {common::send_gid_msg -ssname BD::TCL -id 2012 -severity "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
+##       set bCheckIPsPassed 0
+##    }
+## 
+## }
+INFO: [BD::TCL 103-2011] Checking if the following IPs exist in the project's IP catalog:  
+xilinx.com:ip:axi_bram_ctrl:4.1 xilinx.com:ip:blk_mem_gen:8.4 future-ds.com:user:bfm_axi_if:1.1 xilinx.com:ip:clk_wiz:6.0 xilinx.com:hls:lenet5:1.0 xilinx.com:ip:proc_sys_reset:5.0  .
+## if { $bCheckIPsPassed != 1 } {
+##   common::send_gid_msg -ssname BD::TCL -id 2023 -severity "WARNING" "Will not continue with creation of design due to the error(s) above."
+##   return 3
+## }
+## proc create_root_design { parentCell } {
+## 
+##   variable script_folder
+##   variable design_name
+## 
+##   if { $parentCell eq "" } {
+##      set parentCell [get_bd_cells /]
+##   }
+## 
+##   # Get object for parentCell
+##   set parentObj [get_bd_cells $parentCell]
+##   if { $parentObj == "" } {
+##      catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
+##      return
+##   }
+## 
+##   # Make sure parentObj is hier blk
+##   set parentType [get_property TYPE $parentObj]
+##   if { $parentType ne "hier" } {
+##      catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+##      return
+##   }
+## 
+##   # Save current instance; Restore later
+##   set oldCurInst [current_bd_instance .]
+## 
+##   # Set parent object as current
+##   current_bd_instance $parentObj
+## 
+## 
+##   # Create interface ports
+## 
+##   # Create ports
+##   set BOARD_CLK_IN [ create_bd_port -dir I -type clk BOARD_CLK_IN ]
+##   set BOARD_RST_SW [ create_bd_port -dir I -type rst BOARD_RST_SW ]
+##   set_property -dict [ list CONFIG.POLARITY {ACTIVE_HIGH} ] $BOARD_RST_SW
+##   set SL_AD [ create_bd_port -dir O -from 1 -to 0 SL_AD ]
+##   set SL_CS_N [ create_bd_port -dir O SL_CS_N ]
+##   set SL_DT [ create_bd_port -dir IO -from 31 -to 0 SL_DT ]
+##   set SL_FLAGA [ create_bd_port -dir I SL_FLAGA ]
+##   set SL_FLAGB [ create_bd_port -dir I SL_FLAGB ]
+##   set SL_FLAGC [ create_bd_port -dir I SL_FLAGC ]
+##   set SL_FLAGD [ create_bd_port -dir I SL_FLAGD ]
+##   set SL_MODE [ create_bd_port -dir I -from 1 -to 0 SL_MODE ]
+##   set SL_OE_N [ create_bd_port -dir O SL_OE_N ]
+##   set SL_PCLK [ create_bd_port -dir O -type clk SL_PCLK ]
+##   set SL_PKTEND_N [ create_bd_port -dir O SL_PKTEND_N ]
+##   set SL_RD_N [ create_bd_port -dir O SL_RD_N ]
+##   set SL_WR_N [ create_bd_port -dir O SL_WR_N ]
+##   set SL_RST_N [ create_bd_port -dir I -type rst SL_RST_N ]
+##   set_property -dict [ list CONFIG.POLARITY {ACTIVE_LOW} ] $SL_RST_N
+## 
+##   # Create instance: axi_bram_ctrl_0, and set properties
+##   set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0 ]
+##   set_property -dict [ list \
+##    CONFIG.SINGLE_PORT_BRAM {1} \
+##  ] $axi_bram_ctrl_0
+## 
+##   # Create instance: axi_bram_ctrl_0_bram, and set properties
+##   set axi_bram_ctrl_0_bram [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 axi_bram_ctrl_0_bram ]
+## 
+##   # Create instance: axi_interconnect_0, and set properties
+##   set axi_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 ]
+##   set_property -dict [ list \
+##    CONFIG.NUM_MI {2} \
+##    CONFIG.NUM_SI {2} \
+##  ] $axi_interconnect_0
+## 
+##   # Create instance: bfm_axi_if_0, and set properties
+##   set bfm_axi_if_0 [ create_bd_cell -type ip -vlnv future-ds.com:user:bfm_axi_if:1.1 bfm_axi_if_0 ]
+## 
+##   # Create instance: clk_wiz_0, and set properties
+##   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
+##   set_property -dict [ list \
+##    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} \
+##    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {80} \
+##    CONFIG.CLKOUT2_USED {true} \
+##    CONFIG.NUM_OUT_CLKS {2} \
+##    CONFIG.USE_LOCKED {true} \
+##    CONFIG.USE_RESET {false} \
+##  ] $clk_wiz_0
+## 
+##   # Create instance: lenet5, and set properties
+##   set lenet5 [ create_bd_cell -type ip -vlnv xilinx.com:hls:lenet5:1.0 lenet5 ]
+## 
+##   # Create instance: proc_sys_reset_0, and set properties
+##   set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
+## 
+##   # Create interface connections
+##   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTA]
+##   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins lenet5/s_axi_control]
+##   connect_bd_intf_net -intf_net axi_interconnect_0_M01_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_interconnect_0/M01_AXI]
+##   connect_bd_intf_net -intf_net bfm_axi_if_0_m_axi [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins bfm_axi_if_0/m_axi]
+##   connect_bd_intf_net -intf_net lenet5_m_axi_data [get_bd_intf_pins axi_interconnect_0/S01_AXI] [get_bd_intf_pins lenet5/m_axi_data]
+## 
+##   # Create port connections
+##   connect_bd_net -net BOARD_CLK_IN_1 [get_bd_ports BOARD_CLK_IN] [get_bd_pins clk_wiz_0/clk_in1]
+##   connect_bd_net -net BOARD_RST_SW_1 [get_bd_ports BOARD_RST_SW] [get_bd_pins proc_sys_reset_0/ext_reset_in]
+##   connect_bd_net -net Net [get_bd_ports SL_DT] [get_bd_pins bfm_axi_if_0/SL_DT]
+##   connect_bd_net -net SL_FLAGA_1 [get_bd_ports SL_FLAGA] [get_bd_pins bfm_axi_if_0/SL_FLAGA]
+##   connect_bd_net -net SL_FLAGB_1 [get_bd_ports SL_FLAGB] [get_bd_pins bfm_axi_if_0/SL_FLAGB]
+##   connect_bd_net -net SL_FLAGC_1 [get_bd_ports SL_FLAGC] [get_bd_pins bfm_axi_if_0/SL_FLAGC]
+##   connect_bd_net -net SL_FLAGD_1 [get_bd_ports SL_FLAGD] [get_bd_pins bfm_axi_if_0/SL_FLAGD]
+##   connect_bd_net -net SL_MODE_1 [get_bd_ports SL_MODE] [get_bd_pins bfm_axi_if_0/SL_MODE]
+##   connect_bd_net -net SL_RST_N_1 [get_bd_ports SL_RST_N] [get_bd_pins bfm_axi_if_0/SL_RST_N]
+##   connect_bd_net -net bfm_axi_if_0_GPOUT [get_bd_pins bfm_axi_if_0/GPIN] [get_bd_pins bfm_axi_if_0/GPOUT]
+##   connect_bd_net -net bfm_axi_if_0_SL_AD [get_bd_ports SL_AD] [get_bd_pins bfm_axi_if_0/SL_AD]
+##   connect_bd_net -net bfm_axi_if_0_SL_CS_N [get_bd_ports SL_CS_N] [get_bd_pins bfm_axi_if_0/SL_CS_N]
+##   connect_bd_net -net bfm_axi_if_0_SL_OE_N [get_bd_ports SL_OE_N] [get_bd_pins bfm_axi_if_0/SL_OE_N]
+##   connect_bd_net -net bfm_axi_if_0_SL_PCLK [get_bd_ports SL_PCLK] [get_bd_pins bfm_axi_if_0/SL_PCLK]
+##   connect_bd_net -net bfm_axi_if_0_SL_PKTEND_N [get_bd_ports SL_PKTEND_N] [get_bd_pins bfm_axi_if_0/SL_PKTEND_N]
+##   connect_bd_net -net bfm_axi_if_0_SL_RD_N [get_bd_ports SL_RD_N] [get_bd_pins bfm_axi_if_0/SL_RD_N]
+##   connect_bd_net -net bfm_axi_if_0_SL_WR_N [get_bd_ports SL_WR_N] [get_bd_pins bfm_axi_if_0/SL_WR_N]
+##   connect_bd_net -net bfm_axi_if_0_SYS_RST_N [get_bd_pins bfm_axi_if_0/SYS_RST_N] [get_bd_pins proc_sys_reset_0/aux_reset_in]
+##   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins bfm_axi_if_0/m_axi_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins lenet5/ap_clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+##   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins bfm_axi_if_0/SYS_CLK] [get_bd_pins clk_wiz_0/clk_out2]
+##   connect_bd_net -net clk_wiz_0_locked [get_bd_pins bfm_axi_if_0/SYS_CLK_STABLE] [get_bd_pins clk_wiz_0/locked] [get_bd_pins proc_sys_reset_0/dcm_locked]
+##   connect_bd_net -net proc_sys_reset_0_interconnect_aresetn [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins proc_sys_reset_0/interconnect_aresetn]
+##   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins bfm_axi_if_0/m_axi_aresetn] [get_bd_pins lenet5/ap_rst_n] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+## 
+##   # Create address segments
+##   assign_bd_address -offset 0x00000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces bfm_axi_if_0/m_axi] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+##   assign_bd_address -offset 0xC0000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces bfm_axi_if_0/m_axi] [get_bd_addr_segs lenet5/s_axi_control/Reg] -force
+##   assign_bd_address -offset 0x00000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces lenet5/Data_m_axi_data] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+## 
+##   # Exclude Address Segments
+##   exclude_bd_addr_seg -offset 0x00000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces lenet5/Data_m_axi_data] [get_bd_addr_segs lenet5/s_axi_control/Reg]
+## 
+## 
+##   # Restore current instance
+##   current_bd_instance $oldCurInst
+## 
+##   validate_bd_design
+##   save_bd_design
+## }
+## create_root_design ""
+WARNING: [BD 5-670] It is required to provide a frequency value for a user created input clock port. Please use the <-freq_hz $freq_val> argument of the create_bd_port command. ie create_bd_port -dir I -type clk -freq_hz 100000000 clkin
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] lenet5_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] lenet5_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/bfm_axi_if_0/m_axi' at <0x0000_0000 [ 8K ]>.
+Slave segment '/lenet5/s_axi_control/Reg' is being assigned into address space '/bfm_axi_if_0/m_axi' at <0xC000_0000 [ 64K ]>.
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/lenet5/Data_m_axi_data' at <0x0000_0000 [ 8K ]>.
+Slave segment '/lenet5/s_axi_control/Reg' is being assigned into address space '/lenet5/Data_m_axi_data' at <0x0000_0000 [ 64K ]>.
+Excluding slave segment /lenet5/s_axi_control/Reg from address space /lenet5/Data_m_axi_data.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : </home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.srcs/sources_1/bd/lenet5/lenet5.bd> 
+Wrote  : </home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.srcs/sources_1/bd/lenet5/ui/bd_cd1931f1.ui> 
+# regenerate_bd_layout
+# make_wrapper -files [get_files ${PROJECT_DIR}/${PROJECT_NAME}.srcs/sources_1/bd/${DESIGN_NAME}/${DESIGN_NAME}.bd] -top
+INFO: [BD 41-1662] The design 'lenet5.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.srcs/sources_1/bd/lenet5/lenet5.bd> 
+Wrote  : </home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.srcs/sources_1/bd/lenet5/ui/bd_cd1931f1.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_awid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_arid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awlock'(1) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arlock'(1) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/bfm_axi_if_0/m_axi_bid'(4) to pin: '/axi_interconnect_0/S00_AXI_bid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/bfm_axi_if_0/m_axi_rid'(4) to pin: '/axi_interconnect_0/S00_AXI_rid'(5) - Only lower order bits will be connected.
+VHDL Output written to : /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/synth/lenet5.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_awid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_arid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awlock'(1) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arlock'(1) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/bfm_axi_if_0/m_axi_bid'(4) to pin: '/axi_interconnect_0/S00_AXI_bid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/bfm_axi_if_0/m_axi_rid'(4) to pin: '/axi_interconnect_0/S00_AXI_rid'(5) - Only lower order bits will be connected.
+VHDL Output written to : /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/sim/lenet5.v
+VHDL Output written to : /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/hdl/lenet5_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 9236.402 ; gain = 8.055 ; free physical = 7147 ; free virtual = 19556
+# add_files -norecurse ${PROJECT_DIR}/${PROJECT_NAME}.gen/sources_1/bd/${DESIGN_NAME}/hdl/${DESIGN_NAME}_wrapper.v
+# set_property top ${DESIGN_NAME}_wrapper [current_fileset]
+# update_compile_order -fileset sources_1
+# add_files -fileset constrs_1 -norecurse ${FILE_XDC}
+# proc syn_impl {} {
+#     global PROJECT_DIR PROJECT_NAME DESIGN_NAME
+#     # run synth 
+#     launch_runs synth_1 -jobs 8
+#     wait_on_run synth_1
+# 
+#     # run imple 
+#     launch_runs impl_1 -to_step write_bitstream -jobs 8
+#     wait_on_run impl_1
+# 
+#     if {[file exists "${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/${DESIGN_NAME}_wrapper.bit"]} {
+#          file copy -force ${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/${DESIGN_NAME}_wrapper.bit ${DESIGN_NAME}_wrapper.bit
+#     } else {
+#          puts "ERROR not found ${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/${DESIGN_NAME}_wrapper.bit"
+#     }
+#     if {[file exists "${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/${DESIGN_NAME}_wrapper.ltx"]} {
+#          file copy -force ${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/${DESIGN_NAME}_wrapper.ltx ${DESIGN_NAME}_wrapper.ltx
+#     } else {
+#          if {[file exists "${DESIGN_NAME}_wrapper.ltx"]} {
+#               file delete -force ${DESIGN_NAME}_wrapper.ltx
+#          }
+#     }
+# 
+#     write_bd_layout -format pdf -orientation landscape -force ${DESIGN_NAME}.pdf
+# 
+#     assign_bd_address -force -export_to_file AddressMap.cvs
+#     assign_bd_address -force -export_gui_to_file AddressMapGui.cvs
+# }
+# if {[info exists env(GUI)] == 0} {
+#     set GUI 0
+# } else {
+#     set GUI $::env(GUI)
+# }
+# if { ${GUI} == 0 } {
+#     syn_impl
+# }
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.2
+  **** Build date : Oct 19 2021 at 03:13:42
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.2.0
+  ****** Build date   : Sep 28 2021-06:44:20
+    **** Build number : 2021.2.1632779060
+      ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.
+
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248B84B05
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 10644.465 ; gain = 1249.070 ; free physical = 4886 ; free virtual = 17394
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'lenet5.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.srcs/sources_1/bd/lenet5/lenet5.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_awid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_arid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awlock'(1) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arlock'(1) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/bfm_axi_if_0/m_axi_bid'(4) to pin: '/axi_interconnect_0/S00_AXI_bid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/bfm_axi_if_0/m_axi_rid'(4) to pin: '/axi_interconnect_0/S00_AXI_rid'(5) - Only lower order bits will be connected.
+VHDL Output written to : /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/synth/lenet5.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_awid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_arid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awlock'(1) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arlock'(1) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/bfm_axi_if_0/m_axi_bid'(4) to pin: '/axi_interconnect_0/S00_AXI_bid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/bfm_axi_if_0/m_axi_rid'(4) to pin: '/axi_interconnect_0/S00_AXI_rid'(5) - Only lower order bits will be connected.
+VHDL Output written to : /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/sim/lenet5.v
+VHDL Output written to : /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/hdl/lenet5_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_auto_pc_0/lenet5_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block bfm_axi_if_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block lenet5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+Exporting to file /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/hw_handoff/lenet5.hwh
+Generated Hardware Definition File /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/synth/lenet5.hwdef
+[Tue Jul  2 16:33:24 2024] Launched lenet5_auto_pc_0_synth_1, lenet5_axi_bram_ctrl_0_0_synth_1, lenet5_axi_bram_ctrl_0_bram_0_synth_1, lenet5_lenet5_0_synth_1, lenet5_proc_sys_reset_0_0_synth_1, lenet5_clk_wiz_0_0_synth_1, lenet5_bfm_axi_if_0_0_synth_1, lenet5_xbar_0_synth_1, synth_1...
+Run output will be captured here:
+lenet5_auto_pc_0_synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_auto_pc_0_synth_1/runme.log
+lenet5_axi_bram_ctrl_0_0_synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_axi_bram_ctrl_0_0_synth_1/runme.log
+lenet5_axi_bram_ctrl_0_bram_0_synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_axi_bram_ctrl_0_bram_0_synth_1/runme.log
+lenet5_lenet5_0_synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_lenet5_0_synth_1/runme.log
+lenet5_proc_sys_reset_0_0_synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_proc_sys_reset_0_0_synth_1/runme.log
+lenet5_clk_wiz_0_0_synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_clk_wiz_0_0_synth_1/runme.log
+lenet5_bfm_axi_if_0_0_synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_bfm_axi_if_0_0_synth_1/runme.log
+lenet5_xbar_0_synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_xbar_0_synth_1/runme.log
+synth_1: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/synth_1/runme.log
+[Tue Jul  2 16:33:25 2024] Launched impl_1...
+Run output will be captured here: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 10814.016 ; gain = 120.750 ; free physical = 4796 ; free virtual = 17341
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248B84B05
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Zed-210248B84B05" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248B84B05
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248B84B05

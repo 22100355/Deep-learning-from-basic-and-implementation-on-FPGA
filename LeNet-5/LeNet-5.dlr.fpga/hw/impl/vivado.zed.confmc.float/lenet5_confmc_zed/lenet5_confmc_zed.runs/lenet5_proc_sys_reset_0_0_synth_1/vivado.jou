@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Jul  2 16:35:45 2024
+# Process ID: 17171
+# Current directory: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_proc_sys_reset_0_0_synth_1
+# Command line: vivado -log lenet5_proc_sys_reset_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lenet5_proc_sys_reset_0_0.tcl
+# Log file: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_proc_sys_reset_0_0_synth_1/lenet5_proc_sys_reset_0_0.vds
+# Journal file: /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_proc_sys_reset_0_0_synth_1/vivado.jou
+# Running On: train18, OS: Linux, CPU Frequency: 3199.902 MHz, CPU Physical cores: 4, Host memory: 16610 MB
+#-----------------------------------------------------------
+source lenet5_proc_sys_reset_0_0.tcl -notrace

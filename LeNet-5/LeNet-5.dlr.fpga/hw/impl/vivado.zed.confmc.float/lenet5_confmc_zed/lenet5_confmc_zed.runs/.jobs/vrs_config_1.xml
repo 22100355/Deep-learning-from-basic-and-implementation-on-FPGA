@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="lenet5_auto_pc_0_synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet5_axi_bram_ctrl_0_0_synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet5_axi_bram_ctrl_0_bram_0_synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_axi_bram_ctrl_0_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet5_lenet5_0_synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_lenet5_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet5_proc_sys_reset_0_0_synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet5_clk_wiz_0_0_synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet5_bfm_axi_if_0_0_synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_bfm_axi_if_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet5_xbar_0_synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/lenet5_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="lenet5_auto_pc_0_synth_1"/>
+		<Parent Id="lenet5_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="lenet5_axi_bram_ctrl_0_bram_0_synth_1"/>
+		<Parent Id="lenet5_lenet5_0_synth_1"/>
+		<Parent Id="lenet5_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="lenet5_clk_wiz_0_0_synth_1"/>
+		<Parent Id="lenet5_bfm_axi_if_0_0_synth_1"/>
+		<Parent Id="lenet5_xbar_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="lenet5_auto_pc_0_synth_1"/>
+		<Parent Id="lenet5_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="lenet5_axi_bram_ctrl_0_bram_0_synth_1"/>
+		<Parent Id="lenet5_lenet5_0_synth_1"/>
+		<Parent Id="lenet5_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="lenet5_clk_wiz_0_0_synth_1"/>
+		<Parent Id="lenet5_bfm_axi_if_0_0_synth_1"/>
+		<Parent Id="lenet5_xbar_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

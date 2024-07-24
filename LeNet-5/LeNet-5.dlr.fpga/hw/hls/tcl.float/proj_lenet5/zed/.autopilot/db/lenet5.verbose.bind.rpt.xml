@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'lenet5'" level="0">
+<item name = "Date">Tue Jul  2 15:30:42 2024
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">proj_lenet5</item>
+<item name = "Solution">zed (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.567 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">501432, 501432, 5.014 ms, 5.014 ms, 501433, 501433, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Convolution2d_float_s_fu_132">Convolution2d_float_s, 123079, 123079, 1.231 ms, 1.231 ms, 123079, 123079, no</column>
+<column name="grp_Pooling2dMax_float_1_0_1036831949u_1_fu_146">Pooling2dMax_float_1_0_1036831949u_1, 1193, 1193, 11.930 us, 11.930 us, 1193, 1193, no</column>
+<column name="grp_Convolution2d_float_1_fu_152">Convolution2d_float_1, 23153, 23153, 0.232 ms, 0.232 ms, 23153, 23153, no</column>
+<column name="grp_Pooling2dMax_float_1_0_1036831949u_s_fu_162">Pooling2dMax_float_1_0_1036831949u_s, 417, 417, 4.170 us, 4.170 us, 417, 417, no</column>
+<column name="grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168">lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2, 288017, 288017, 2.880 ms, 2.880 ms, 288017, 288017, no</column>
+<column name="grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26_fu_178">lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26, 60495, 60495, 0.605 ms, 0.605 ms, 60495, 60495, no</column>
+<column name="grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27_fu_188">lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27, 5060, 5060, 50.600 us, 50.600 us, 5060, 5060, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,33 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_avg.hpp:33:17" msg_body="unused parameter 'ceil_mode'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:39:17" msg_body="unused parameter 'ceil_mode'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/activation_relu.hpp:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ActivationReLu" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lenet5" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=lenet5" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:44:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet5" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=10 port = classes offset = slave bundle = data" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet5" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1024 port = image offset = slave bundle = data" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:52:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet5" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = return register" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet5" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:42:0" msg_body="Inlining function 'void dlr::Linear1d&lt;float, 1, 0, 1036831949u&gt;(float*, float const*, float const*, float const*, unsigned short, unsigned short, unsigned short)' into 'lenet5(float*, float const (*) [32])'">
+        <args Callee="void dlr::Linear1d&lt;float, 1, 0, 1036831949u&gt;(float*, float const*, float const*, float const*, unsigned short, unsigned short, unsigned short)" Caller="lenet5(float*, float const (*) [32])"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:42:0" msg_body="Inlining function 'void dlr::Linear1d&lt;float, 0, 0, 1036831949u&gt;(float*, float const*, float const*, float const*, unsigned short, unsigned short, unsigned short)' into 'lenet5(float*, float const (*) [32])'">
+        <args Callee="void dlr::Linear1d&lt;float, 0, 0, 1036831949u&gt;(float*, float const*, float const*, float const*, unsigned short, unsigned short, unsigned short)" Caller="lenet5(float*, float const (*) [32])"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

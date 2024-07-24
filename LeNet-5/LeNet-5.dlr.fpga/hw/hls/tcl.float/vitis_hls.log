@@ -1,0 +1,504 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /tools/xilinx/Vitis_HLS/2021.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/tools/xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'idec' on host 'train18' (Linux_x86_64 version 3.10.0-1160.el7.x86_64) on Tue Jul 02 15:30:04 KST 2024
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/hls/tcl.float'
+Sourcing Tcl script 'hls_project.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_lenet5 
+INFO: [HLS 200-10] Opening project '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/hls/tcl.float/proj_lenet5'.
+INFO: [HLS 200-1510] Running: add_files -cflags -std=c++11 -c -O3 -m64 -mcmodel=large -D__SYNTHESIS__ -DDTYPE=float -DEMBED_RELU=1  -I/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src -I/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src -I/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.pytorch -I/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp 
+INFO: [HLS 200-10] Adding design file '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags -std=c++11    -O3 -m64 -mcmodel=large -D__SYNTHESIS__ -DDTYPE=float -DEMBED_RELU=1  -I/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src -I/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src -I/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.pytorch -I/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src -tb /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/main.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/main.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top lenet5 
+INFO: [HLS 200-1510] Running: open_solution zed 
+INFO: [HLS 200-10] Opening solution '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/hls/tcl.float/proj_lenet5/zed'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_addr64=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64=0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.111 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp' ... 
+WARNING: [HLS 207-5287] unused parameter 'ceil_mode' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_avg.hpp:33:17)
+WARNING: [HLS 207-5287] unused parameter 'ceil_mode' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:39:17)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.01 seconds. CPU system time: 0.34 seconds. Elapsed time: 4.05 seconds; current allocated memory: 200.160 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'void dlr::Linear1d<float, 1, 0, 1036831949u>(float*, float const*, float const*, float const*, unsigned short, unsigned short, unsigned short)' into 'lenet5(float*, float const (*) [32])' (/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:42:0)
+INFO: [HLS 214-178] Inlining function 'void dlr::Linear1d<float, 0, 0, 1036831949u>(float*, float const*, float const*, float const*, unsigned short, unsigned short, unsigned short)' into 'lenet5(float*, float const (*) [32])' (/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr/native.cpp/src/lenet5.cpp:42:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst writes of length 10 and bit width 32 in loop 'VITIS_LOOP_64_1'(/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64:22) has been inferred on bundle 'data'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64:22)
+INFO: [HLS 214-115] Multiple burst reads of length 5 and bit width 32 in loop 'VITIS_LOOP_116_8'(/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:116:43) has been inferred on bundle 'data'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:116:43)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.01 seconds. CPU system time: 0.28 seconds. Elapsed time: 4.31 seconds; current allocated memory: 200.160 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 200.160 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 4.4 seconds. CPU system time: 0.02 seconds. Elapsed time: 4.43 seconds; current allocated memory: 200.160 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 4.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 4.54 seconds; current allocated memory: 200.160 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_98_3' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_98_3' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_98_3' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_112_6' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_98_3' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_112_6' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_68_2' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62) in function 'lenet5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_68_2' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62) in function 'lenet5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_68_2' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62) in function 'lenet5' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_98_3' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_112_6' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>.1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_98_3' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>.1' for pipelining.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'VITIS_LOOP_110_4' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:81) in function 'dlr::Convolution2d<float>' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_112_6' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_101_4' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_102_5' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_115_7' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>.1' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_116_8' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>.1' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_101_4' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>.1' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_102_5' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>.1' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_110_4' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:81) in function 'dlr::Convolution2d<float>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_115_7' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_116_8' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82) in function 'dlr::Convolution2d<float>' completely with a factor of 5.
+INFO: [XFORM 203-11] Balancing expressions in function 'dlr::Convolution2d<float>.1' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:81:95)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 4.77 seconds. CPU system time: 0.01 seconds. Elapsed time: 4.8 seconds; current allocated memory: 264.160 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_64_1' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62:14) in function 'lenet5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_64_1' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62:14) in function 'lenet5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_64_1' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:65:14) in function 'lenet5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_97_2' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85:23) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_96_1' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:84:14) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_97_2' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:85:23) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_96_1' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:84:14) in function 'dlr::Pooling2dMax<float, 1, 0, 1036831949u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_97_2' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82:26) in function 'dlr::Convolution2d<float>.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_111_5' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82:23) in function 'dlr::Convolution2d<float>.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_110_4' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:81:14) in function 'dlr::Convolution2d<float>.1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_94_1' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:81:18) in function 'dlr::Convolution2d<float>.1' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_97_2' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82:26) in function 'dlr::Convolution2d<float>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_111_5' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:82:23) in function 'dlr::Convolution2d<float>'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_94_1' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:81:18) in function 'dlr::Convolution2d<float>' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'p1_out_data' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/pooling_2d_max.hpp:113:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'f1_out_data' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:74:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_data' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:100:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_data' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131:25)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.43 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet5' ...
+WARNING: [SYN 201-103] Legalizing function name 'Convolution2d<float>_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3' to 'Convolution2d_float_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3'.
+WARNING: [SYN 201-103] Legalizing function name 'Convolution2d<float>_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' to 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6'.
+WARNING: [SYN 201-103] Legalizing function name 'Convolution2d<float>' to 'Convolution2d_float_s'.
+WARNING: [SYN 201-103] Legalizing function name 'Pooling2dMax<float, 1, 0, 1036831949u>.1' to 'Pooling2dMax_float_1_0_1036831949u_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Convolution2d<float>.1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3' to 'Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3'.
+WARNING: [SYN 201-103] Legalizing function name 'Convolution2d<float>.1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6' to 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6'.
+WARNING: [SYN 201-103] Legalizing function name 'Convolution2d<float>.1' to 'Convolution2d_float_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Pooling2dMax<float, 1, 0, 1036831949u>' to 'Pooling2dMax_float_1_0_1036831949u_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Convolution2d_float_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'out_data'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_97_2_VITIS_LOOP_98_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_97_2_VITIS_LOOP_98_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'out_data'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'.
+WARNING: [HLS 200-880] The II Violation in module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' (loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'): Unable to enforce a carried dependence constraint (II = 1, distance = 2, offset = 1) between 'store' operation ('out_data_addr_write_ln131', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131) of variable 'add', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131 on array 'out_data' and 'load' operation ('out_data_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131) on array 'out_data'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' (loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'): Unable to enforce a carried dependence constraint (II = 2, distance = 2, offset = 1) between 'store' operation ('out_data_addr_write_ln131', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131) of variable 'add', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131 on array 'out_data' and 'load' operation ('out_data_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131) on array 'out_data'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' (loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'): Unable to enforce a carried dependence constraint (II = 3, distance = 2, offset = 1) between 'store' operation ('out_data_addr_write_ln131', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131) of variable 'add', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131 on array 'out_data' and 'load' operation ('out_data_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131) on array 'out_data'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' (loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('reuse_reg_write_ln131', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131) of variable 'add', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:131 on local variable 'reuse_reg' and 'load' operation ('reuse_reg_load') on local variable 'reuse_reg'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' (loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'): Unable to schedule bus read operation ('data_addr_3_read_4', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:127) on port 'data' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:127) due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' (loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'): Unable to schedule bus read operation ('data_addr_4_read_3', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:127) on port 'data' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:127) due to limited memory ports (II = 23). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' (loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'): Unable to schedule bus read operation ('data_addr_4_read_4', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:127) on port 'data' (/home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:127) due to limited memory ports (II = 24). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 25, Depth = 146, loop 'VITIS_LOOP_111_5_VITIS_LOOP_112_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.83 seconds. CPU system time: 0 seconds. Elapsed time: 0.84 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.08 seconds. CPU system time: 0 seconds. Elapsed time: 1.09 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Convolution2d_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.62 seconds. CPU system time: 0 seconds. Elapsed time: 0.63 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Pooling2dMax_float_1_0_1036831949u_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln97) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'p1_out_data'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'in_data'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_96_1_VITIS_LOOP_97_2_VITIS_LOOP_98_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 17, loop 'VITIS_LOOP_96_1_VITIS_LOOP_97_2_VITIS_LOOP_98_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'out_data'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_97_2_VITIS_LOOP_98_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_97_2_VITIS_LOOP_98_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln110) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln110_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'out_data'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'p1_out_data'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6'.
+WARNING: [HLS 200-885] The II Violation in module 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6' (loop 'VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6'): Unable to schedule 'load' operation ('p1_out_data_load_16', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/convolution_2d.hpp:127) on array 'p1_out_data' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'p1_out_data'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 141, loop 'VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.91 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.93 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.32 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Convolution2d_float_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.05 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Pooling2dMax_float_1_0_1036831949u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln97) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'in_data'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_96_1_VITIS_LOOP_97_2_VITIS_LOOP_98_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 17, loop 'VITIS_LOOP_96_1_VITIS_LOOP_97_2_VITIS_LOOP_98_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.73 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.74 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln64) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'.
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:64) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 22, loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.49 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'.
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:62) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 20, loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'.
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:68) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:68) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:68) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:68) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27' (loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('sum_write_ln71', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71) of variable 'sum', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:71 on local variable 'sum' and 'load' operation ('sum_load', /home/idec/work/ai_fpga/codes/Deep_Learning_Routines/v1.4.1/src/linear_1d.hpp:68) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 20, loop 'VITIS_LOOP_64_1_VITIS_LOOP_68_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 328.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.62 seconds. CPU system time: 0 seconds. Elapsed time: 0.62 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Convolution2d_float_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Convolution2d_float_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3' pipeline 'VITIS_LOOP_97_2_VITIS_LOOP_98_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Convolution2d_float_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.51 seconds. CPU system time: 0 seconds. Elapsed time: 1.52 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6' pipeline 'VITIS_LOOP_111_5_VITIS_LOOP_112_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 328.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Convolution2d_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Convolution2d_float_s/grp_fu_236_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Convolution2d_float_s/grp_fu_240_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Convolution2d_float_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.04 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Pooling2dMax_float_1_0_1036831949u_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Pooling2dMax_float_1_0_1036831949u_1' pipeline 'VITIS_LOOP_96_1_VITIS_LOOP_97_2_VITIS_LOOP_98_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_10ns_5ns_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Pooling2dMax_float_1_0_1036831949u_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.63 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.65 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3' pipeline 'VITIS_LOOP_97_2_VITIS_LOOP_98_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.03 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_conv2_weight_ROM_AUTO_1R' to 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_1bkb' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6' pipeline 'VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6' is 17116 from HDL expression: ((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 13 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 13 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_5ns_12ns_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_8ns_4ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Convolution2d_float_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Convolution2d_float_1/grp_fu_236_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Convolution2d_float_1/grp_fu_240_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_4ns_8ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Convolution2d_float_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.53 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.59 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Pooling2dMax_float_1_0_1036831949u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Pooling2dMax_float_1_0_1036831949u_s' pipeline 'VITIS_LOOP_96_1_VITIS_LOOP_97_2_VITIS_LOOP_98_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_5ns_7ns_4ns_11_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Pooling2dMax_float_1_0_1036831949u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.7 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.72 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2' pipeline 'VITIS_LOOP_64_1_VITIS_LOOP_68_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_9ns_9ns_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.08 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.12 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26' pipeline 'VITIS_LOOP_64_1_VITIS_LOOP_68_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27' pipeline 'VITIS_LOOP_64_1_VITIS_LOOP_68_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27/m_axi_data_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_4ns_7ns_7ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.44 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5/data' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5/classes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5/image_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet5' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'classes', 'image_r', 'return' and 'ap_local_deadlock' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.42 seconds; current allocated memory: 392.160 MB.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_Convolution2d_float_s_conv1_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_Convolution2d_float_s_conv1_weight_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_1bkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_Convolution2d_float_1_conv2_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fc1_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fc1_weight_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26_fc2_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_26_fc2_weight_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27_fc3_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lenet5_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_27_fc3_weight_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet5_p1_out_data_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet5_c1_out_data_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet5_c2_out_data_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet5_p2_out_data_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet5_f1_out_data_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet5_f2_out_data_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 11.96 seconds. CPU system time: 0.09 seconds. Elapsed time: 12.07 seconds; current allocated memory: 392.160 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.97 seconds. CPU system time: 0.02 seconds. Elapsed time: 1 seconds; current allocated memory: 392.160 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet5.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet5.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 116.73 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 58.43 seconds. CPU system time: 1.09 seconds. Elapsed time: 59.53 seconds; current allocated memory: -745.109 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2718.480 ; gain = 2.023 ; free physical = 8165 ; free virtual = 20544
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/xilinx/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'lenet5_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet5_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet5_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'lenet5_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet5_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet5_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/xilinx/Vivado/2021.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  2 15:31:42 2024...
+INFO: [HLS 200-802] Generated output file proj_lenet5/zed/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 32.2 seconds. CPU system time: 1.41 seconds. Elapsed time: 46.21 seconds; current allocated memory: 64.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 93.87 seconds. Total CPU system time: 2.94 seconds. Total elapsed time: 108.92 seconds; peak allocated memory: 1.111 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Jul  2 15:31:52 2024...

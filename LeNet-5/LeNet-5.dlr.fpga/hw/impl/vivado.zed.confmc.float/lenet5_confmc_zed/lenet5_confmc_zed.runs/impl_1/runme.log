@@ -1,0 +1,884 @@
+
+*** Running vivado
+    with args -log lenet5_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source lenet5_wrapper.tcl -notrace
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source lenet5_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2718.480 ; gain = 2.023 ; free physical = 8397 ; free virtual = 17359
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/hls/tcl.float/proj_lenet5/zed/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/iplib/bfm_axi_if.z7'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/xilinx/Vivado/2021.2/data/ip'.
+Command: link_design -top lenet5_wrapper -part xc7z020clg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-454] Reading design checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_axi_bram_ctrl_0_0/lenet5_axi_bram_ctrl_0_0.dcp' for cell 'lenet5_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_axi_bram_ctrl_0_bram_0/lenet5_axi_bram_ctrl_0_bram_0.dcp' for cell 'lenet5_i/axi_bram_ctrl_0_bram'
+INFO: [Project 1-454] Reading design checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_bfm_axi_if_0_0/lenet5_bfm_axi_if_0_0.dcp' for cell 'lenet5_i/bfm_axi_if_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_clk_wiz_0_0/lenet5_clk_wiz_0_0.dcp' for cell 'lenet5_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_lenet5_0/lenet5_lenet5_0.dcp' for cell 'lenet5_i/lenet5'
+INFO: [Project 1-454] Reading design checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_proc_sys_reset_0_0/lenet5_proc_sys_reset_0_0.dcp' for cell 'lenet5_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_xbar_0/lenet5_xbar_0.dcp' for cell 'lenet5_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_auto_pc_0/lenet5_auto_pc_0.dcp' for cell 'lenet5_i/axi_interconnect_0/m00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.64 . Memory (MB): peak = 2718.629 ; gain = 0.000 ; free physical = 7969 ; free virtual = 16947
+INFO: [Netlist 29-17] Analyzing 9270 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_clk_wiz_0_0/lenet5_clk_wiz_0_0_board.xdc] for cell 'lenet5_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_clk_wiz_0_0/lenet5_clk_wiz_0_0_board.xdc] for cell 'lenet5_i/clk_wiz_0/inst'
+Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_clk_wiz_0_0/lenet5_clk_wiz_0_0.xdc] for cell 'lenet5_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_clk_wiz_0_0/lenet5_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_clk_wiz_0_0/lenet5_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 3105.457 ; gain = 362.965 ; free physical = 7239 ; free virtual = 16231
+Finished Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_clk_wiz_0_0/lenet5_clk_wiz_0_0.xdc] for cell 'lenet5_i/clk_wiz_0/inst'
+Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_proc_sys_reset_0_0/lenet5_proc_sys_reset_0_0_board.xdc] for cell 'lenet5_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_proc_sys_reset_0_0/lenet5_proc_sys_reset_0_0_board.xdc] for cell 'lenet5_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_proc_sys_reset_0_0/lenet5_proc_sys_reset_0_0.xdc] for cell 'lenet5_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.gen/sources_1/bd/lenet5/ip/lenet5_proc_sys_reset_0_0/lenet5_proc_sys_reset_0_0.xdc] for cell 'lenet5_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc:58]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc:58]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc:58]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc:58]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc:58]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc:58]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc:58]
+Finished Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/con-fmc_lpc_zed.xdc]
+Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/fpga_zed.xdc]
+WARNING: [Constraints 18-619] A clock with name 'BOARD_CLK_IN' already exists, overwriting the previous clock with the same name. [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/fpga_zed.xdc:13]
+Finished Parsing XDC File [/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/xdc/fpga_zed.xdc]
+INFO: [Project 1-1714] 18 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[0].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[10].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[11].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[12].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[13].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[14].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[15].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[16].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[17].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[18].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[19].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[1].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[20].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[21].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[22].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[23].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[24].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[25].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[26].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[27].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[28].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[29].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[2].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[30].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[31].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[3].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[4].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[5].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[6].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[7].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[8].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance lenet5_i/bfm_axi_if_0/inst/IDX_SL_DT[9].IOPAD_SL_DT has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3116.363 ; gain = 0.000 ; free physical = 7365 ; free virtual = 16357
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3982 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 672 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 32 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 64 instances
+  RAM16X1S => RAM32X1S (RAMS32): 160 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 32 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances
+  RAM32X1S => RAM32X1S (RAMS32): 32 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 2849 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 32 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 64 instances
+
+22 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 3116.363 ; gain = 397.883 ; free physical = 7365 ; free virtual = 16357
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3148.379 ; gain = 32.016 ; free physical = 7355 ; free virtual = 16347
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 20494d924
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 3148.379 ; gain = 0.000 ; free physical = 7249 ; free virtual = 16241
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/axi_bram_ctrl_0/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_NO_RD_CMD_OPT.GEN_NARROW_CNT.narrow_bram_addr_inc_d1_i_1 into driver instance lenet5_i/axi_bram_ctrl_0/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_NO_RD_CMD_OPT.GEN_NARROW_CNT.narrow_bram_addr_inc_d1_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/axi_bram_ctrl_0/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.clr_bram_we_i_1 into driver instance lenet5_i/axi_bram_ctrl_0/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/axi_bvalid_int_i_3, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/axi_interconnect_0/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_multi_thread.active_target[9]_i_2 into driver instance lenet5_i/axi_interconnect_0/xbar/inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_multi_thread.active_target[9]_i_6, which resulted in an inversion of 10 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/axi_interconnect_0/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_multi_thread.active_target[9]_i_2__0 into driver instance lenet5_i/axi_interconnect_0/xbar/inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_multi_thread.active_target[9]_i_6__0, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst_i_1 into driver instance lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/SYS_RST_N_INST_0, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_du2f/u2f_wr_full_inferred_i_1 into driver instance lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_du2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/s_axis_tready_INST_0, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_head[4]_i_1__0 into driver instance lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_head[4]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_u2f_fifo/fifo_head[4]_i_1 into driver instance lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_u2f_fifo/fifo_head[4]_i_2__0, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/lenet5/inst/data_m_axi_U/bus_read/fifo_rctl/invalid_len_event_reg2_i_1 into driver instance lenet5_i/lenet5/inst/data_m_axi_U/bus_read/fifo_rctl/sect_cnt[19]_i_3, which resulted in an inversion of 18 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/lenet5/inst/data_m_axi_U/bus_read/fifo_rreq/empty_n_i_1__1 into driver instance lenet5_i/lenet5/inst/data_m_axi_U/bus_read/fifo_rreq/pout[2]_i_2__2, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3_fu_57/flow_control_loop_pipe_sequential_init_U/add_ln82_1_reg_219[10]_i_1 into driver instance lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3_fu_57/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm[4]_i_2__0, which resulted in an inversion of 11 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/lenet5/inst/grp_Convolution2d_float_s_fu_132/grp_Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_445/mul_0_4_4_reg_1591_pp0_iter3_reg_reg[31]_srl2_i_1 into driver instance lenet5_i/lenet5/inst/grp_Convolution2d_float_s_fu_132/grp_Convolution2d_float_Pipeline_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_445/mul_0_4_4_reg_1591[31]_i_2, which resulted in an inversion of 35 pins
+INFO: [Opt 31-1287] Pulled Inverter lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/icmp_ln68_reg_358[0]_i_1 into driver instance lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/p_reg_reg_i_20, which resulted in an inversion of 5 pins
+INFO: [Opt 31-138] Pushed 16 inverter(s) to 121 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 19d3b41ab
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3342.488 ; gain = 1.004 ; free physical = 7120 ; free virtual = 16111
+INFO: [Opt 31-389] Phase Retarget created 622 cells and removed 703 cells
+INFO: [Opt 31-1021] In phase Retarget, 22 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1e389bd6d
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3342.488 ; gain = 1.004 ; free physical = 7120 ; free virtual = 16112
+INFO: [Opt 31-389] Phase Constant propagation created 46 cells and removed 175 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 19 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1a92e7741
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3342.488 ; gain = 1.004 ; free physical = 7120 ; free virtual = 16112
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 846 cells
+INFO: [Opt 31-1021] In phase Sweep, 90 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1a92e7741
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3342.488 ; gain = 1.004 ; free physical = 7120 ; free virtual = 16112
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1a92e7741
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3342.488 ; gain = 1.004 ; free physical = 7120 ; free virtual = 16112
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1a92e7741
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3342.488 ; gain = 1.004 ; free physical = 7138 ; free virtual = 16130
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 30 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             622  |             703  |                                             22  |
+|  Constant propagation         |              46  |             175  |                                             19  |
+|  Sweep                        |               0  |             846  |                                             90  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             30  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3342.488 ; gain = 0.000 ; free physical = 7138 ; free virtual = 16130
+Ending Logic Optimization Task | Checksum: 1443771cd
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 3342.488 ; gain = 1.004 ; free physical = 7138 ; free virtual = 16130
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 129 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 53 newly gated: 1 Total Ports: 258
+Number of Flops added for Enable Generation: 5
+
+Ending PowerOpt Patch Enables Task | Checksum: c2e71a7d
+
+Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.79 . Memory (MB): peak = 4011.492 ; gain = 0.000 ; free physical = 7031 ; free virtual = 16025
+Ending Power Optimization Task | Checksum: c2e71a7d
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:19 . Memory (MB): peak = 4011.492 ; gain = 669.004 ; free physical = 7089 ; free virtual = 16082
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: fd22f494
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 4011.492 ; gain = 0.000 ; free physical = 7069 ; free virtual = 16063
+Ending Final Cleanup Task | Checksum: fd22f494
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 4011.492 ; gain = 0.000 ; free physical = 7068 ; free virtual = 16062
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4011.492 ; gain = 0.000 ; free physical = 7068 ; free virtual = 16062
+Ending Netlist Obfuscation Task | Checksum: fd22f494
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4011.492 ; gain = 0.000 ; free physical = 7068 ; free virtual = 16062
+INFO: [Common 17-83] Releasing license: Implementation
+62 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:16 ; elapsed = 00:00:49 . Memory (MB): peak = 4011.492 ; gain = 895.129 ; free physical = 7069 ; free virtual = 16063
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4011.492 ; gain = 0.000 ; free physical = 6971 ; free virtual = 15967
+INFO: [Common 17-1381] The checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/impl_1/lenet5_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 4011.492 ; gain = 0.000 ; free physical = 6947 ; free virtual = 15958
+INFO: [runtcl-4] Executing : report_drc -file lenet5_wrapper_drc_opted.rpt -pb lenet5_wrapper_drc_opted.pb -rpx lenet5_wrapper_drc_opted.rpx
+Command: report_drc -file lenet5_wrapper_drc_opted.rpt -pb lenet5_wrapper_drc_opted.pb -rpx lenet5_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/impl_1/lenet5_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:36 ; elapsed = 00:00:11 . Memory (MB): peak = 4022.512 ; gain = 11.020 ; free physical = 6836 ; free virtual = 15851
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_ENARDEN_cooolgate_en_sig_56) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/cmd_ready_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/cmd_wr_valid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[0] (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/cmd_wr_valid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/cmd_wr_valid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/cmd_wr_valid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/WIDTH_32.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/cmd_wr_valid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENB_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/state_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENB_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/state_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENB_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/state_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENB_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/state_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENB_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/state_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_head_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_head_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_head_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_head_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_tail_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_tail_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_tail_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_tail_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_df2u/WIDTH_34.BLK_512.u_fifo/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/u_f2u_fifo/fifo_tail_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/fadd_32ns_32ns_32_5_full_dsp_1_U133/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/fadd_32ns_32ns_32_5_full_dsp_1_U134/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U58/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U59/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U60/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U61/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U62/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U63/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U64/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U65/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U66/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U67/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/fadd_32ns_32ns_32_5_full_dsp_1_U68/lenet5_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings, 13 Advisories
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6834 ; free virtual = 15849
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: b5a00f09
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6834 ; free virtual = 15849
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6834 ; free virtual = 15849
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e7fea829
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6889 ; free virtual = 15904
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1375a5b54
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:23 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6784 ; free virtual = 15800
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1375a5b54
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:23 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6784 ; free virtual = 15800
+Phase 1 Placer Initialization | Checksum: 1375a5b54
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:24 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6781 ; free virtual = 15796
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: cefab2f5
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:29 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6747 ; free virtual = 15762
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: aa73f476
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:34 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6726 ; free virtual = 15742
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: aa73f476
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:34 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6726 ; free virtual = 15742
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 1 LUTNM shape to break, 2736 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 1, two critical 0, total 1, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 1217 nets or LUTs. Breaked 1 LUT, combined 1216 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-76] Pass 1. Identified 2 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ap_CS_fsm_pp0_stage1. Replicated 18 times.
+INFO: [Physopt 32-81] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ap_CS_fsm_reg[0]_0[0]. Replicated 12 times.
+INFO: [Physopt 32-232] Optimized 2 nets. Created 30 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 2 nets or cells. Created 30 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6703 ; free virtual = 15719
+INFO: [Physopt 32-457] Pass 1. Identified 1 candidate cell for DSP register optimization.
+INFO: [Physopt 32-665] Processed cell lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/mul_ln96_reg_168_reg. 11 registers were pushed out.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 1 net or cell. Created 11 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6702 ; free virtual = 15719
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6704 ; free virtual = 15720
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            1  |           1216  |                  1217  |           0  |           1  |  00:00:04  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |           30  |              0  |                     2  |           0  |           1  |  00:00:03  |
+|  DSP Register                                     |           11  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           42  |           1216  |                  1220  |           0  |           9  |  00:00:08  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: f3842375
+
+Time (s): cpu = 00:03:22 ; elapsed = 00:01:38 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6692 ; free virtual = 15709
+Phase 2.4 Global Placement Core | Checksum: c6026c26
+
+Time (s): cpu = 00:03:29 ; elapsed = 00:01:42 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6686 ; free virtual = 15702
+Phase 2 Global Placement | Checksum: c6026c26
+
+Time (s): cpu = 00:03:29 ; elapsed = 00:01:42 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6710 ; free virtual = 15726
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: ae79e87b
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:01:47 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6703 ; free virtual = 15719
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1bba8c981
+
+Time (s): cpu = 00:06:40 ; elapsed = 00:03:59 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6687 ; free virtual = 15703
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1039c9106
+
+Time (s): cpu = 00:06:41 ; elapsed = 00:04:00 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6687 ; free virtual = 15704
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1c7462a22
+
+Time (s): cpu = 00:06:42 ; elapsed = 00:04:01 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6687 ; free virtual = 15704
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1d1be2f2d
+
+Time (s): cpu = 00:07:14 ; elapsed = 00:04:13 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6717 ; free virtual = 15734
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: cfcd989a
+
+Time (s): cpu = 00:07:39 ; elapsed = 00:04:36 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6655 ; free virtual = 15671
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 8f349b47
+
+Time (s): cpu = 00:07:43 ; elapsed = 00:04:39 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6663 ; free virtual = 15680
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 11fbfd028
+
+Time (s): cpu = 00:07:43 ; elapsed = 00:04:40 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6663 ; free virtual = 15680
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 7009c108
+
+Time (s): cpu = 00:08:33 ; elapsed = 00:04:57 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6647 ; free virtual = 15701
+Phase 3 Detail Placement | Checksum: 7009c108
+
+Time (s): cpu = 00:08:33 ; elapsed = 00:04:57 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6647 ; free virtual = 15701
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 15b05e0d6
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.808 | TNS=-40.006 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1ff625c92
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6618 ; free virtual = 15671
+INFO: [Place 46-33] Processed net lenet5_i/lenet5/inst/data_m_axi_U/bus_write/buff_wdata/SR[0], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1c9fe08a6
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6616 ; free virtual = 15669
+Phase 4.1.1.1 BUFG Insertion | Checksum: 15b05e0d6
+
+Time (s): cpu = 00:09:28 ; elapsed = 00:05:18 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6618 ; free virtual = 15671
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.641. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1d0246c4c
+
+Time (s): cpu = 00:10:30 ; elapsed = 00:06:14 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6606 ; free virtual = 15659
+
+Time (s): cpu = 00:10:30 ; elapsed = 00:06:14 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6606 ; free virtual = 15660
+Phase 4.1 Post Commit Optimization | Checksum: 1d0246c4c
+
+Time (s): cpu = 00:10:30 ; elapsed = 00:06:15 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6607 ; free virtual = 15660
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1d0246c4c
+
+Time (s): cpu = 00:10:32 ; elapsed = 00:06:16 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6607 ; free virtual = 15661
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|              16x16|                8x8|
+|___________|___________________|___________________|
+|      South|                8x8|                2x2|
+|___________|___________________|___________________|
+|       East|                8x8|                8x8|
+|___________|___________________|___________________|
+|       West|                1x1|                4x4|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1d0246c4c
+
+Time (s): cpu = 00:10:32 ; elapsed = 00:06:16 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6609 ; free virtual = 15662
+Phase 4.3 Placer Reporting | Checksum: 1d0246c4c
+
+Time (s): cpu = 00:10:32 ; elapsed = 00:06:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6609 ; free virtual = 15662
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6609 ; free virtual = 15662
+
+Time (s): cpu = 00:10:32 ; elapsed = 00:06:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6609 ; free virtual = 15662
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 165cd8d03
+
+Time (s): cpu = 00:10:33 ; elapsed = 00:06:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6609 ; free virtual = 15662
+Ending Placer Task | Checksum: c11c72a1
+
+Time (s): cpu = 00:10:33 ; elapsed = 00:06:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6609 ; free virtual = 15662
+INFO: [Common 17-83] Releasing license: Implementation
+119 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:10:38 ; elapsed = 00:06:20 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6675 ; free virtual = 15729
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6539 ; free virtual = 15698
+INFO: [Common 17-1381] The checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/impl_1/lenet5_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:33 ; elapsed = 00:00:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6631 ; free virtual = 15708
+INFO: [runtcl-4] Executing : report_io -file lenet5_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.25 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6615 ; free virtual = 15692
+INFO: [runtcl-4] Executing : report_utilization -file lenet5_wrapper_utilization_placed.rpt -pb lenet5_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file lenet5_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.67 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6625 ; free virtual = 15704
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 41.49s |  WALL: 12.74s
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6587 ; free virtual = 15673
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.641 | TNS=-9.268 |
+Phase 1 Physical Synthesis Initialization | Checksum: 16deb6c30
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6564 ; free virtual = 15650
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.641 | TNS=-9.268 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 16deb6c30
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6561 ; free virtual = 15647
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.641 | TNS=-9.268 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[31]_0[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/clk_wiz_0/inst/clk_out1_lenet5_clk_wiz_0_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[9]_i_3_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10[9]_i_5_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.504 | TNS=-8.993 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[31]_0[11]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[11]_i_3_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10[11]_i_5_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.385 | TNS=-8.717 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[31]_0[10]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[10]_i_3_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10[10]_i_5_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.371 | TNS=-8.703 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10[10]_i_5_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q100[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.366 | TNS=-8.597 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10[9]_i_5_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q100[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.359 | TNS=-8.491 |
+INFO: [Physopt 32-702] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/clk_wiz_0/inst/clk_out2_lenet5_clk_wiz_0_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[25]_i_1_n_0. Critical path length was reduced through logic transformation on cell lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[25]_i_1_comp.
+INFO: [Physopt 32-735] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[31]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.359 | TNS=-8.415 |
+INFO: [Physopt 32-702] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[11]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[31]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[31]_i_2_n_0. Critical path length was reduced through logic transformation on cell lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[31]_i_2_comp.
+INFO: [Physopt 32-735] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/CMD1__2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.265 | TNS=-4.436 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q100[10]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ADDRA[5].  Re-placed instance lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ram9_reg_0_63_9_11_i_2
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ADDRA[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.242 | TNS=-4.241 |
+INFO: [Physopt 32-702] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/state_cmd[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/p_0_in__1[0]. Critical path length was reduced through logic transformation on cell lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/state_cmd[0]_i_1_comp.
+INFO: [Physopt 32-735] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/CMD1__2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.200 | TNS=-4.129 |
+INFO: [Physopt 32-81] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ADDRA[5]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ADDRA[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.184 | TNS=-3.637 |
+INFO: [Physopt 32-702] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[11]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/control_flit[5].  Re-placed instance lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/control_flit_reg[5]
+INFO: [Physopt 32-735] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/control_flit[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.161 | TNS=-1.349 |
+INFO: [Physopt 32-710] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[25]_i_1_n_0. Critical path length was reduced through logic transformation on cell lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[25]_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/CMD1__2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.157 | TNS=-1.288 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[31]_0[22]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[22]_i_4_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10[22]_i_7_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.146 | TNS=-1.131 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q7_reg[31]_0[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q7_reg[23]_i_4_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q7[23]_i_7_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.135 | TNS=-0.985 |
+INFO: [Physopt 32-702] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/cmd_rd_ready. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/cmd_ready_i_1_n_0. Critical path length was reduced through logic transformation on cell lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/cmd_ready_i_1_comp.
+INFO: [Physopt 32-735] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/CMD1__2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.132 | TNS=-0.917 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/Q[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q11_reg[1]_i_3_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q11[1]_i_6_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.119 | TNS=-0.786 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p2_out_data_U/Q[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[24]_i_2__2_n_3.  Re-placed instance lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[24]_i_2__2
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[24]_i_2__2_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.107 | TNS=-0.667 |
+INFO: [Physopt 32-702] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/CMD1__2_repN_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD[25]_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.101 | TNS=-0.560 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/Q[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q11_reg[19]_i_4_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q11[19]_i_8_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.087 | TNS=-0.459 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/c2_out_data_U/q0_reg[31]_0[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/c2_out_data_U/add_ln106_2_reg_1285_reg[9]_22. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/c2_out_data_U/q0[23]_i_5__0_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.067 | TNS=-0.373 |
+INFO: [Physopt 32-663] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/CMD1__2.  Re-placed instance lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/state_cmd[0]_i_3_comp_4
+INFO: [Physopt 32-735] Processed net lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_gpif2mst/u_cu2f/CMD1__2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.061 | TNS=-0.305 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q0_reg[31]_0[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/q0[14]_i_2__0_n_3.  Re-placed instance lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/q0[14]_i_2__0
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/q0[14]_i_2__0_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.039 | TNS=-0.245 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/f1_out_data_U/q0_reg[31]_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net lenet5_i/lenet5/inst/f1_out_data_U/q0[7]_i_2__1_n_3.  Re-placed instance lenet5_i/lenet5/inst/f1_out_data_U/q0[7]_i_2__1
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/f1_out_data_U/q0[7]_i_2__1_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.039 | TNS=-0.206 |
+INFO: [Physopt 32-81] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ADDRA[4]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/ADDRA[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.037 | TNS=-0.142 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p2_out_data_U/Q[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[25]_i_2__3_n_3.  Re-placed instance lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[25]_i_2__3
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[25]_i_2__3_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.035 | TNS=-0.105 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p2_out_data_U/Q[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[31]_i_3__1_n_3.  Re-placed instance lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[31]_i_3__1
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/grp_lenet5_Pipeline_VITIS_LOOP_64_1_VITIS_LOOP_68_2_fu_168/flow_control_loop_pipe_sequential_init_U/q0[31]_i_3__1_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.023 | TNS=-0.071 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/Q[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q11_reg[20]_i_4_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q11[20]_i_8_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.022 | TNS=-0.048 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q7_reg[31]_0[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q7_reg[19]_i_4_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q7[19]_i_8_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.016 | TNS=-0.027 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[31]_0[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[23]_i_4_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10[23]_i_7_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.009 | TNS=-0.011 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[31]_0[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10_reg[21]_i_4_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q10[21]_i_7_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.002 | TNS=-0.003 |
+INFO: [Physopt 32-663] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/accum_1_0_1_reg_3046[15].  Re-placed instance lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/accum_1_0_1_reg_3046_reg[15]
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/grp_Convolution2d_float_1_fu_152/grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66/accum_1_0_1_reg_3046[15]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.001 | TNS=-0.001 |
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/Q[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q11_reg[2]_i_3_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net lenet5_i/lenet5/inst/p1_out_data_U/q11[2]_i_6_n_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.001 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.001 | TNS=0.000 |
+Phase 3 Critical Path Optimization | Checksum: 16deb6c30
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6565 ; free virtual = 15651
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.001 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.001 | TNS=0.000 |
+Phase 4 Critical Path Optimization | Checksum: 16deb6c30
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6565 ; free virtual = 15651
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6567 ; free virtual = 15654
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.001 | TNS=0.000 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.641  |          9.268  |            2  |              0  |                    32  |           0  |           2  |  00:00:06  |
+|  Total          |          0.641  |          9.268  |            2  |              0  |                    32  |           0  |           3  |  00:00:06  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6567 ; free virtual = 15653
+Ending Physical Synthesis Task | Checksum: cb3dd554
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6567 ; free virtual = 15653
+INFO: [Common 17-83] Releasing license: Implementation
+276 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:01:12 ; elapsed = 00:00:30 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6605 ; free virtual = 15691
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6334 ; free virtual = 15557
+INFO: [Common 17-1381] The checkpoint '/home/idec/work/ai_fpga/codes/LeNet-5/LeNet-5.dlr.fpga/hw/impl/vivado.zed.confmc.float/lenet5_confmc_zed/lenet5_confmc_zed.runs/impl_1/lenet5_wrapper_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6640 ; free virtual = 16107
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 61ba5680 ConstDB: 0 ShapeSum: 64b709fd RouteDB: 0
+Post Restoration Checksum: NetGraph: 1eef21e9 NumContArr: 12eb9eac Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 31dac095
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:26 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6496 ; free virtual = 15966
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 31dac095
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:27 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6512 ; free virtual = 15982
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 31dac095
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6491 ; free virtual = 15961
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 31dac095
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6491 ; free virtual = 15961
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1af6d9488
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:00:57 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6438 ; free virtual = 15907
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.043 | TNS=-0.043 | WHS=-0.340 | THS=-279.501|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 1daef67c0
+
+Time (s): cpu = 00:02:19 ; elapsed = 00:01:11 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6427 ; free virtual = 15897
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.043 | TNS=-0.042 | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 13b6cc910
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:11 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6427 ; free virtual = 15896
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 51321
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 51320
+  Number of Partially Routed Nets     = 1
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1c3484369
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:12 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6418 ; free virtual = 15888
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 1c3484369
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:12 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6418 ; free virtual = 15888
+
+Phase 3.2 Update Timing
+Phase 3.2 Update Timing | Checksum: 160d785fc
+
+Time (s): cpu = 00:03:39 ; elapsed = 00:01:40 . Memory (MB): peak = 4022.512 ; gain = 0.000 ; free physical = 6391 ; free virtual = 15899
+WARNING: [Route 35-447] Congestion is preventing the router from routing all nets. The router will prioritize the successful completion of routing all nets over timing optimizations.
+Phase 3 Initial Routing | Checksum: 167e06f9a
+
+Time (s): cpu = 00:03:59 ; elapsed = 00:01:48 . Memory (MB): peak = 4025.488 ; gain = 2.977 ; free physical = 6359 ; free virtual = 15884
+INFO: [Route 35-580] Design has 98 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++=============================+=============================+==============================================================+
+| Launch Clock                | Capture Clock               | Pin                                                          |
++=============================+=============================+==============================================================+
+| clk_out2_lenet5_clk_wiz_0_0 | clk_out1_lenet5_clk_wiz_0_0 | lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD_reg[15]/D |
+| clk_out2_lenet5_clk_wiz_0_0 | clk_out1_lenet5_clk_wiz_0_0 | lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD_reg[3]/D  |
+| clk_out2_lenet5_clk_wiz_0_0 | clk_out1_lenet5_clk_wiz_0_0 | lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD_reg[6]/D  |
+| clk_out2_lenet5_clk_wiz_0_0 | clk_out1_lenet5_clk_wiz_0_0 | lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD_reg[14]/D |
+| clk_out2_lenet5_clk_wiz_0_0 | clk_out1_lenet5_clk_wiz_0_0 | lenet5_i/bfm_axi_if_0/inst/u_bfm_axi/u_trx_axi/CMD_reg[27]/D |
++-----------------------------+-----------------------------+--------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+Phase 4.1 Global Iteration 0 | Checksum: 167e06f9a
+
+Time (s): cpu = 00:04:05 ; elapsed = 00:01:51 . Memory (MB): peak = 4025.488 ; gain = 2.977 ; free physical = 6366 ; free virtual = 15892
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 35197

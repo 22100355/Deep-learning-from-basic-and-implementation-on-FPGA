@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vitis HLS Report for 'Convolution2d_float_1'
+================================================================
+* Date:           Tue Jul  2 15:30:50 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        proj_lenet5
+* Solution:       zed (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    23153|    23153|  0.232 ms|  0.232 ms|  23153|  23153|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                                                             |                                                                                   |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                                           Instance                                          |                                       Module                                      |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3_fu_57                     |Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3                     |      102|      102|   1.020 us|   1.020 us|   102|   102|       no|
+        |grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66  |Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6  |     1340|     1340|  13.400 us|  13.400 us|  1340|  1340|       no|
+        +---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_94_1  |    23152|    23152|      1447|          -|          -|    16|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     35|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |       96|   60|    9281|  12147|    -|
+|Memory           |        0|    -|      32|      8|    -|
+|Multiplexer      |        -|    -|       -|    138|    -|
+|Register         |        -|    -|      80|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       96|   60|    9393|  12328|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       34|   27|       8|     23|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------+----+------+-------+-----+
+    |                                           Instance                                          |                                       Module                                      | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------+----+------+-------+-----+
+    |grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66  |Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6  |       96|  60|  9249|  11939|    0|
+    |grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3_fu_57                     |Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3                     |        0|   0|    32|    167|    0|
+    |mul_4ns_8ns_11_1_1_U91                                                                       |mul_4ns_8ns_11_1_1                                                                 |        0|   0|     0|     41|    0|
+    +---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------+----+------+-------+-----+
+    |Total                                                                                        |                                                                                   |       96|  60|  9281|  12147|    0|
+    +---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------------+----------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |    Memory    |                    Module                    | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------------+----------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |conv2_bias_U  |Convolution2d_float_1_conv2_bias_ROM_AUTO_1R  |        0|  32|   8|    0|    16|   32|     1|          512|
+    +--------------+----------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total         |                                              |        0|  32|   8|    0|    16|   32|     1|          512|
+    +--------------+----------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln94_1_fu_94_p2  |         +|   0|  0|  12|          12|           8|
+    |add_ln94_fu_106_p2   |         +|   0|  0|  13|           5|           1|
+    |icmp_ln94_fu_100_p2  |      icmp|   0|  0|  10|           5|           6|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  35|          22|          15|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm          |  37|          7|    1|          7|
+    |f_fu_40            |   9|          2|    5|         10|
+    |grp_fu_179_ce      |   9|          2|    1|          2|
+    |grp_fu_183_ce      |   9|          2|    1|          2|
+    |grp_fu_187_ce      |   9|          2|    1|          2|
+    |out_data_address0  |  14|          3|   11|         33|
+    |out_data_ce0       |  14|          3|    1|          3|
+    |out_data_d0        |  14|          3|   32|         96|
+    |out_data_we0       |  14|          3|    1|          3|
+    |phi_mul_fu_36      |   9|          2|   12|         24|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              | 138|         29|   66|        182|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                   Name                                                   | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |B_reg_174                                                                                                 |  32|   0|   32|          0|
+    |ap_CS_fsm                                                                                                 |   6|   0|    6|          0|
+    |f_fu_40                                                                                                   |   5|   0|    5|          0|
+    |grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_110_4_VITIS_LOOP_111_5_VITIS_LOOP_112_6_fu_66_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Convolution2d_float_1_Pipeline_VITIS_LOOP_97_2_VITIS_LOOP_98_3_fu_57_ap_start_reg                     |   1|   0|    1|          0|
+    |mul_ln96_reg_168                                                                                          |  11|   0|   11|          0|
+    |phi_mul_fu_36                                                                                             |  12|   0|   12|          0|
+    |phi_mul_load_reg_155                                                                                      |  12|   0|   12|          0|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                                     |  80|   0|   80|          0|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++-----------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_236_p_din0      |  out|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_236_p_din1      |  out|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_236_p_opcode    |  out|    2|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_236_p_dout0     |   in|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_236_p_ce        |  out|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_240_p_din0      |  out|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_240_p_din1      |  out|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_240_p_opcode    |  out|    2|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_240_p_dout0     |   in|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_240_p_ce        |  out|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_244_p_din0      |  out|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_244_p_din1      |  out|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_244_p_dout0     |   in|   32|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|grp_fu_244_p_ce        |  out|    1|  ap_ctrl_hs|  Convolution2d<float>.1|  return value|
+|out_data_address0      |  out|   11|   ap_memory|                out_data|         array|
+|out_data_ce0           |  out|    1|   ap_memory|                out_data|         array|
+|out_data_we0           |  out|    1|   ap_memory|                out_data|         array|
+|out_data_d0            |  out|   32|   ap_memory|                out_data|         array|
+|out_data_q0            |   in|   32|   ap_memory|                out_data|         array|
+|p1_out_data_address0   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce0        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q0         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address1   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce1        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q1         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address2   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce2        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q2         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address3   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce3        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q3         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address4   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce4        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q4         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address5   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce5        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q5         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address6   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce6        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q6         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address7   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce7        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q7         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address8   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce8        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q8         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address9   |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce9        |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q9         |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address10  |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce10       |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q10        |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address11  |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce11       |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q11        |   in|   32|   ap_memory|             p1_out_data|         array|
+|p1_out_data_address12  |  out|   11|   ap_memory|             p1_out_data|         array|
+|p1_out_data_ce12       |  out|    1|   ap_memory|             p1_out_data|         array|
+|p1_out_data_q12        |   in|   32|   ap_memory|             p1_out_data|         array|
++-----------------------+-----+-----+------------+------------------------+--------------+
+
